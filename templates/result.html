@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+
+<html lang="en" dir="ltr">
+	<head>
+		<meta charset="utf-8">
+        <title>Restaurant Reviews Sentiment Analysis</title>
+        <link rel="shortcut icon" href="{{ url_for('static', filename='food-favicon.ico') }}">
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+        
+        
+	</head>
+
+	<body>
+
+		
+    	<div class="container">
+            <h1 class='container-heading'><span class="heading_font">SENTIMENT ANALYSIS</h1>
+            <div class='description'>
+    			<p></p>
+    		</div>
+    	</div>
+
+		
+		<div class="results">
+			{% if prediction==1 %}
+				<h1><span class='safe'>Positive review 😊  😃 </span></h1>
+				
+			{% elif prediction==0 %}
+				<h1><span class='danger'>Negative review 😠 😡</span></h1>
+				
+			{% endif %}
+		</div>
+
+		
+       <div class='footer'>
+           <div class="contact">
+            
+               <a target="_blank" href="https://www.linkedin.com/in/iatultripathi/"><i class="fab fa-linkedin fa-lg contact-icon"></i></a>
+           </div>
+           <p class='footer-description'>atul tripathi</p>
+       </div>
+
+    </body>
+</html>
